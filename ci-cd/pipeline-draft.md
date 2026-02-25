@@ -74,3 +74,20 @@ Aún no existe:
 
 - ejecución automática
 - validaciones automáticas
+
+### Fase 4 — Registro de Ejecución
+
+Objetivo:
+Dejar evidencia verificable de que el proceso fue ejecutado.
+
+Todo pipeline necesita generar trazabilidad.
+En esta fase se documenta cuándo se ejecutó y cuál fue el resultado.
+
+Datos mínimos a registrar:
+
+- Fecha de ejecución
+- Versión del repositorio utilizada
+- Resultado del proceso (éxito o fallo)
+- Observaciones relevantes
+
+La evidencia de ejecución se registrará en: ci-cd/execution-log.md
