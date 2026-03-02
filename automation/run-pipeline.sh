@@ -4,17 +4,30 @@
 # Este script representa lo que un sistema CI ejecutará automáticamente.
 # Aún se ejecuta manualmente en esta fase del laboratorio.
 
-set -euo pipefall
+set -Eeuo pipefail
 
 PIPELINE_NAME="DEVOPS-LAB PIPELINE"
 RUN_ID=$(date +"%Y%m%d-%H%M%S")
+CURRENT_STAGE="INIT"
 
 log() {
   echo "[${PIPELINE_NAME}] [RUN:${RUN_ID}] $1"
 }
+handle_error() {
+local exit_code=$?
+echo ""
+echo "X PIPELINE FAILED"
+echo "Stage: ${CURRENT_STAGE}"
+echo "Exit Code: ${exit_code}"
+echo "Timestamp: $(date)"
+exit $exit_code
+}
+trap 'handle_error' ERR
+
 
 stage() {
-    STAGE_NAME="1"
+    STAGE_NAME="$1"
+    CURRENT_STAGE="$STAGE_NAME"
     log "========== STAGE: ${STAGE_NAME} =========="
 }
 
@@ -28,10 +41,11 @@ validate()  {
     stage "VALIDATE"
     log "Running repository validation checks"
     test -f docker/Dockerfile
+    test -f README.md
 }
 
 build() {
-    stage"BUILD"
+    stage "BUILD"
     log "Simulating container build"
     echo "docker build would run here"
 }
@@ -39,6 +53,10 @@ build() {
 test_phase() {
     stage "TEST"
     log "Simulating validation test"
+    
+    #Simulacion de test controlado
+    echo "Running dummy test..."
+    true
 }
 
 report() {
