@@ -1,8 +1,9 @@
 name: DevOps Lab Pipeline
 
 on:
-  branches:
-    - main
+  push:
+    branches:
+      - main
 
 jobs:
   pipeline:
