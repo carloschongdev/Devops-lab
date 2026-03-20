@@ -17,12 +17,12 @@ jobs:
         run: docker --version
 
       - name: Build Docker image
-        run: docker build -t devops-lab-web ./docker
+        run: docker build -t devops-lab-web:${{ github.sha }} ./docker
 
       - name: Run container test
         run: |
           docker rm -f test-container || true
-          docker run -d -p 8080:80 --name test-container devops-lab-web
+          docker run -d -p 8080:80 --name test-container devops-lab-web:${{ github.sha}}
           sleep 5
       - name: Health check
         run: |
