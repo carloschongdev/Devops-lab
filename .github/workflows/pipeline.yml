@@ -38,4 +38,3 @@ jobs:
         run: |
           docker stop test-container
           docker rm test-container
-          
