@@ -5,11 +5,11 @@ Setting up environment and understanding CI/CD.
 
 ## Conceptos Observados
 
-CI (Integracion Continuano o Continuous Integration) no es una herramienta es una practica.
+CI (Integración Continua o Continuous Integration) no es una herramienta es una práctica.
 Es un evento automático que ocurre cuando hay cambios en el repositorio.
 La integracion pasa a ser responsabilidad de los desarrolladores.
 se realizan commits regularmente, por lo que debe ser compilado regularmente.
-La compilacion se debe activar automaticamente.
+La compilación se debe activar automaticamente.
 
 Antes todo era manual:
 
@@ -23,7 +23,7 @@ Ahora el repositorio dispara procesos automáticamente.
 
 Pipeline = receta definida que siempre ejecuta los mismos pasos, deberia de realizarce en una base de datos dedicada.
 
-CD (Entrega Continua o Continuous Delivery/Deployments) es una practica de desarrollo que se puede lanzar en produccion en cualquier momento.
+CD (Entrega Continua o Continuous Delivery/Deployments) es una práctica de desarrollo que se puede lanzar en produccion en cualquier momento.
 
 Anteriormente se recibia el paquete de instalacion con las instrucciones, manual asi que podria tener errores humanos.
 
