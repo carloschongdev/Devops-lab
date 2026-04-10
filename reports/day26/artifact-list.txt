@@ -1,0 +1,4 @@
+total 0
+drwxr-xr-x@  3 carloschong  staff   96 Apr  9 14:15 .
+drwx------  11 carloschong  staff  352 Apr  9 14:15 ..
+drwxr-xr-x@  3 carloschong  staff   96 Apr  9 14:15 build-metadata

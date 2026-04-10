@@ -1,0 +1,20 @@
+9509647 update: README.md automation/run-pipeline.sh notes/week2.md notes/week3.md notes/week4.md notes/week5.md notes/week6.md
+d20bfb9 docs: add weekly DevOps Lab learning notes (week2-week6)
+8ed51b5 chore: repository cleanup after code review (remove duplicate pipeline, improve portability, add README)
+31b04d8 feat: add build metadata artifact to CI pipeline
+b6ef1f9 fix: remove stray character from cleanup step in CI pipeline
+4f4bd78 feat: version docker image usin commit sha
+a707c54 refactor: split pipeline steps and ensure cleanup with always
+02187b5 feat: improve pipeline with health check and cleanup
+6f18b6b feat: add real container healtg check
+d0d6457 fix: correct yaml syntax for github actions
+1ca6874 fix: correct github actions workflow path
+d944b05 ci: add github actions pipeline
+c70bcdc feat: real docker test in pipeline (day 19-20)
+ff4ee96 feat: dockerized static web with nginx
+cc5f84f feat(ci): add YAML pipeline engine and artifact reporting
+95b0a7b chore: ignore pipeline runtime logs directory
+28555fa refactor(pipeline): resilient engine with always-report and manual error control
+bda5777 feat(pipeline): deterministic error handling with perserved exit codes
+b99cf94 Add stage-level and total duration observability to pipeline
+5511e70 Implement staged pipeline engine with structured logging and error trapping
