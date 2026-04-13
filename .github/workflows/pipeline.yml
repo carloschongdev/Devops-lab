@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - main
-      - pipeline-failure-test
       
 jobs:
   pipeline:
@@ -13,9 +12,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-
-      - name: Simulate failure
-        run: exit 1
 
       - name: Set up Docker
         run: docker --version
